@@ -1,0 +1,21 @@
+div{
+    display: inline-block;
+    width: 30%;
+    margin-left:2%;
+    vertical-align: top;
+}
+
+span{
+    font-weight: bold;
+}
+
+h1{
+    text-align: inline;
+    color: blue;
+}
+li{
+    border: solid yellow;
+}
+span{
+    border: dotted darkcyan;
+}
