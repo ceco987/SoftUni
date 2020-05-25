@@ -14,7 +14,7 @@ public class MaximumSum {
 
     private static String findMaxSum(int[][] matrix, int rows, int cols) {
     int sum = Integer.MIN_VALUE;
-    you find the maximum sum and put it here;
+    
     }
 
     private static int[][] inputMatrix(int rows, int cols, Scanner scanner) {
