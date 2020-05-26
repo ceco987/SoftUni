@@ -2,7 +2,6 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class MaximumSum {
-    private static int bigRow =0, bigCol =0;
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -11,7 +10,7 @@ public class MaximumSum {
         int rows = input[0];
         int cols = input[1];
         int[][]matrix = inputMatrix(rows,cols,scanner);
-        findMaxSum(matrix,rows,cols,bigRow,bigCol);
+        findMaxSum(matrix,rows,cols);
     }
 
     private static void printBiggest(int[][] matrix,int bigRow, int bigCol, int sum) {
@@ -25,8 +24,9 @@ public class MaximumSum {
         }
     }
 
-    private static void findMaxSum(int[][] matrix, int rows, int cols, int bigRow, int bigCol) {
+    private static void findMaxSum(int[][] matrix, int rows, int cols) {
     int sum = Integer.MIN_VALUE;
+    int bigRow =0, bigCol =0;
         for (int row = 0; row < rows - 2; row++) {
             for (int col = 0; col < cols - 2; col++) {
                 int currSum =0;
