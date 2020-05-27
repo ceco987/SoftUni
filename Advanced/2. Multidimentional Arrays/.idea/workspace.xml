@@ -1,7 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="b6e2add1-1b36-4b51-ac8f-ab813fcba6f9" name="Default Changelist" comment="" />
+    <list default="true" id="b6e2add1-1b36-4b51-ac8f-ab813fcba6f9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../2. Multidimentional Arrays exercise/src/MatrixShuffling.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lecture 2 Multidimentional Arrays.iml" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,6 +47,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../1. Stacks and Queues exercise" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunManager">
@@ -55,11 +77,26 @@
     </task>
     <servers />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
     <state x="898" y="370" width="602" height="430" key="#Notifications" timestamp="1590480988846">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="898" y="370" width="602" height="430" key="#Notifications/-1920.452.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1590480988846" />
+    <state x="1220" y="275" key="FileChooserDialogImpl" timestamp="1590607706832">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1220" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1590607706832" />
     <state width="1340" height="266" key="GridCell.Tab.0.bottom" timestamp="1590481131087">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -76,5 +113,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1340" height="266" key="GridCell.Tab.0.right/-1920.452.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1590481131087" />
+    <state x="922" y="165" key="SettingsEditor" timestamp="1590607680098">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="922" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1590607680098" />
   </component>
 </project>
