@@ -14,14 +14,16 @@ public class TheHeiganDance {
         String lastSpell = "";
         while (heiganHealth > 0 && playerHealth > 0) {
             heiganHealth -= damageToHeigan;
-            if (heiganHealth <= 0) winner = true;
-
+            if (heiganHealth <= 0) {
+                winner = true;
+                break;
+            }
             if (cloud) {
                 playerHealth -= 3500;
                 cloud = false;
-                if (playerHealth <= 0) {
-                    break;
-                }
+            }
+            if (playerHealth <= 0) {
+                break;
             }
             String spell = input[0];
             int spellRow = Integer.parseInt(input[1]);
@@ -70,7 +72,7 @@ public class TheHeiganDance {
                     }
                     break;
             }
-            if (playerHealth<=0) break;
+            if (playerHealth <= 0) break;
             input = scanner.nextLine().split("\\s+");
         }
         if (winner) {
@@ -78,9 +80,9 @@ public class TheHeiganDance {
             System.out.println("Player: " + playerHealth);
             System.out.print("Final position: " + playerRow + ", " + playerCol);
         } else {
-            if (lastSpell.equals("Cloud")) lastSpell="Plague Cloud";
+            if (lastSpell.equals("Cloud")) lastSpell = "Plague Cloud";
             System.out.printf("Heigan: %.2f%n", heiganHealth);
-            if (playerHealth>0) System.out.println("Player: "+playerHealth);
+            if (playerHealth > 0) System.out.println("Player: " + playerHealth);
             else System.out.println("Player: Killed by " + lastSpell);
             System.out.print("Final position: " + playerRow + ", " + playerCol);
         }
