@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e03d8d94-de42-4a05-82d4-97a773a422fc" name="Default Changelist" comment="" />
+    <list default="true" id="e03d8d94-de42-4a05-82d4-97a773a422fc" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../Advanced/3. Sets and Maps Advanced/out/production/3. Sets and Maps Advanced/AverageStudentsGrades.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Advanced/3. Sets and Maps Advanced/out/production/3. Sets and Maps Advanced/AverageStudentsGrades.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Advanced/3. Sets and Maps Advanced/out/production/3. Sets and Maps Advanced/META-INF/3. Sets and Maps Advanced.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Advanced/3. Sets and Maps Advanced/src/ProductShop.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Advanced/3. Sets and Maps Advanced/src/ProductShop.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,14 +18,19 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
   <component name="ProjectId" id="1Ud1ZFRDH1q2cTbNQzO9YQYDCKD" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Lecture 3 Arrays exercise" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager" selected="Application.AppendArrays">
     <configuration name="AppendArrays" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -68,18 +77,6 @@
         <item itemvalue="Application.HouseParty" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
