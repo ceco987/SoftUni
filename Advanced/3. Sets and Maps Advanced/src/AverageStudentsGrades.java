@@ -21,7 +21,12 @@ public class AverageStudentsGrades {
     }
 
     private static double getAverage(List<Double> value) {
-        return value.stream().mapToDouble(e -> e/value.size()).sum();
+        double sum = 0;
+        for (Double num : value) {
+            sum+=num;
+        }
+        return sum/value.size();
+//        return value.stream().mapToDouble(e -> e/value.size()).sum();
     }
 
     private static String printGrades(List<Double> list) {
