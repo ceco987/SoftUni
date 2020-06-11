@@ -10,7 +10,7 @@ public class PopulationCounter {
             String city = tokens[0];
             String country = tokens[1];
             int population = Integer.parseInt(tokens[2]);
-
+            
 
         }
     }
