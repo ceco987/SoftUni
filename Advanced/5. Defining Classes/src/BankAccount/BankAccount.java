@@ -9,7 +9,7 @@ public class BankAccount {
 
     //constructors
     BankAccount() {
-        this.id = bankAccountCount++;
+        this.id = BankAccount.bankAccountCount++;
         System.out.printf("Account ID%d created%n", this.id);
     }
 

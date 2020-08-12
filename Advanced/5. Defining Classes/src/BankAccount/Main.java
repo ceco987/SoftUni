@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String data = "";
-        BankAccount account = null;
+        BankAccount account;
         HashMap<Integer, BankAccount> database = new HashMap<>();
         while (!"End".equals(data = scanner.nextLine())) {
             String[] input = data.split("\\s+");
