@@ -15,4 +15,12 @@ public class Pokemon {
         return this.element;
     }
 
+    public void decreaseHealth() {
+        this.health-=10;
+    }
+
+    public int getHealth(){
+        return this.health;
+    }
+
 }
