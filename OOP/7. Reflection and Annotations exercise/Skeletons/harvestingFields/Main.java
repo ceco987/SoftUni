@@ -9,13 +9,28 @@ public class Main {
 		Scanner scanner = new Scanner(System.in);
 		Class<RichSoilLand> cl =  RichSoilLand.class;
 		String input = "";
-		while (!"HARVEST".equals(scanner.nextLine())){
-			if (!input.equals("all")){
-
-			}
-			else{
-				Arrays.stream(cl.getDeclaredFields())
-						.forEach(e-> System.out.println(e.getModifiers()));
+		while (!"HARVEST".equals(input = scanner.nextLine())){
+			switch(input){
+				case "private":
+					Arrays.stream(cl.getDeclaredFields())
+							.filter(e->Modifier.isPrivate(e.getModifiers()))
+							.forEach(e -> System.out.printf("private %s %s%n",e.getType().getSimpleName(),e.getName()));
+					break;
+				case "protected":
+					Arrays.stream(cl.getDeclaredFields())
+							.filter(e->Modifier.isProtected(e.getModifiers()))
+							.forEach(e-> System.out.printf("protected %s %s%n",e.getType().getSimpleName(),e.getName()));
+					break;
+				case "public":
+					Arrays.stream(cl.getDeclaredFields())
+							.filter(e->Modifier.isPublic(e.getModifiers()))
+							.forEach(e-> System.out.printf("public %s %s%n",e.getType().getSimpleName(),e.getName()));
+					break;
+				default:
+					Arrays.stream(cl.getDeclaredFields())
+							.forEach(e-> System.out.printf("%s %s %s%n",Modifier.toString(e.getModifiers()),
+									e.getType().getSimpleName(),
+									e.getName()));
 			}
 		}
 	}
