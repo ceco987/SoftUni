@@ -23,7 +23,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a5a53053-ef5f-4cc2-9b8d-f342356b6805" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../7. Reflection and Annotations exercise/Skeletons/harvestingFields/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../7. Reflection and Annotations exercise/Skeletons/harvestingFields/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rpg_lab/Hero.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/rpg_lab/Hero.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +45,7 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.1.1\plugins\maven\lib\maven3" />
+        <option name="mavenHome" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.2\plugins\maven\lib\maven3" />
       </MavenGeneralSettings>
     </option>
   </component>
@@ -63,7 +65,38 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
-  <component name="RunManager" selected="JUnit.DummyTests">
+  <component name="RunManager" selected="JUnit.AxeTests">
+    <configuration name="AxeTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="unit-test-inclass" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="rpg_tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="rpg_tests" />
+      <option name="MAIN_CLASS_NAME" value="rpg_tests.AxeTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AxeTests.weaponAttacksLosesDurability" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="unit-test-inclass" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="rpg_tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="rpg_tests" />
+      <option name="MAIN_CLASS_NAME" value="rpg_tests.AxeTests" />
+      <option name="METHOD_NAME" value="weaponAttacksLosesDurability" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="DummyTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="unit-test-inclass" />
       <extension name="coverage">
@@ -76,22 +109,6 @@
       <option name="MAIN_CLASS_NAME" value="rpg_tests.DummyTests" />
       <option name="METHOD_NAME" value="deadDummyGivesXp" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DummyTests.aliveDummyDoesntGiveXP" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="unit-test-inclass" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="rpg_tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="rpg_tests" />
-      <option name="MAIN_CLASS_NAME" value="rpg_tests.DummyTests" />
-      <option name="METHOD_NAME" value="aliveDummyDoesntGiveXP" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -128,29 +145,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DummyTests.dummyLosesHealthWhenAttacked" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="unit-test-inclass" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="rpg_tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="rpg_tests" />
-      <option name="MAIN_CLASS_NAME" value="rpg_tests.DummyTests" />
-      <option name="METHOD_NAME" value="dummyLosesHealthWhenAttacked" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AxeTests" />
+        <item itemvalue="JUnit.AxeTests.weaponAttacksLosesDurability" />
         <item itemvalue="JUnit.DummyTests" />
         <item itemvalue="JUnit.DummyTests.deadDummyGivesXp" />
         <item itemvalue="JUnit.DummyTests.deadDummyThrowsException" />
-        <item itemvalue="JUnit.DummyTests.aliveDummyDoesntGiveXP" />
-        <item itemvalue="JUnit.DummyTests.dummyLosesHealthWhenAttacked" />
       </list>
     </recent_temporary>
   </component>
@@ -175,6 +176,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1053" y="100" width="774" height="840" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1597778118198">
@@ -189,29 +191,34 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1169" y="309" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1597776794973" />
-    <state width="914" height="279" key="GridCell.Tab.0.bottom" timestamp="1597787905323">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1597790627162">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1597790627162" />
     <state width="914" height="279" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1597781942474" />
     <state width="914" height="279" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1597787905323" />
-    <state width="914" height="279" key="GridCell.Tab.0.center" timestamp="1597787905323">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1597790627162">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1597790627162" />
     <state width="914" height="279" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1597781942474" />
     <state width="914" height="279" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1597787905323" />
-    <state width="914" height="279" key="GridCell.Tab.0.left" timestamp="1597787905323">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1597790627161">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1597790627161" />
     <state width="914" height="279" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1597781942474" />
     <state width="914" height="279" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1597787905323" />
-    <state width="914" height="279" key="GridCell.Tab.0.right" timestamp="1597787905323">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1597790627162">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1597790627162" />
     <state width="914" height="279" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1597781942474" />
     <state width="914" height="279" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1597787905323" />
-    <state x="782" y="109" key="SettingsEditor" timestamp="1597778228251">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="498" y="0" key="SettingsEditor" timestamp="1597790624681">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="498" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1597790624681" />
     <state x="782" y="109" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1597778228251" />
     <state x="1211" y="305" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1597776862510">
       <screen x="0" y="0" width="1920" height="1040" />
