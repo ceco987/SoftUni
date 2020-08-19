@@ -14,8 +14,10 @@ public class Clinic {
 
     public void add(Pet pet) {
         boolean condition = checkCondition(pet);
-        if (capacity > 0 &&condition) this.data.add(pet);
-        capacity -= 1;
+        if (capacity > 0 &&condition) {
+            this.data.add(pet);
+            capacity -= 1;
+        }
     }
 
     private boolean checkCondition(Pet pet) {
