@@ -1,6 +1,6 @@
 package vetClinic;
 
-import java.util.LinkedList;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Clinic {
@@ -9,7 +9,7 @@ public class Clinic {
 
     public Clinic(int capacity) {
         this.capacity = capacity;
-        this.data = new LinkedList<>();
+        this.data = new ArrayList<>();
     }
 
     public void add(Pet pet) {
@@ -42,6 +42,7 @@ public class Clinic {
         for (Pet domat : this.data) {
             if (domat.getName().equals(name)&&domat.getOwner().equals(owner)) {
                 bestPet=domat;
+                break;
             }
         }
         return bestPet;

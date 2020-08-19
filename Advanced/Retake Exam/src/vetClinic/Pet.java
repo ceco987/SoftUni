@@ -2,15 +2,13 @@ package vetClinic;
 
 public class Pet {
     private String name;
-    private String owner;
     private int age;
+    private String owner;
 
     public Pet(String name, int age, String owner) {
         this.name = name;
+        this.setAge(age);
         this.owner = owner;
-        if (age > 0) {
-            this.age = age;
-        }
     }
 
     @Override
@@ -31,4 +29,9 @@ public class Pet {
     public int getAge() {
         return age;
     }
+
+    public void setAge(int age) {
+        if (age > 0) this.age = age;
+    }
+
 }
