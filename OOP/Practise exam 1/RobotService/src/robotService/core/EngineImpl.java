@@ -17,7 +17,7 @@ public class EngineImpl implements Engine {
     private Controller controller;
 
     public EngineImpl() {
-        // this.controller = new ControllerImpl();   //TODO Implement first
+        this.controller = new ControllerImpl();
         this.reader = new ConsoleReader();
         this.writer = new ConsoleWriter();
     }
@@ -78,32 +78,30 @@ public class EngineImpl implements Engine {
     }
 
     private String manufacture(String[] data) {
-        // TODO
-        return null;
+
+        return this.controller.manufacture(data[0],
+                data[1], Integer.parseInt(data[2]),
+                Integer.parseInt(data[3]),
+                Integer.parseInt(data[4]));
     }
 
     private String repair(String[] data) {
-        // TODO
-        return null;
+        return this.controller.repair(data[0],Integer.parseInt(data[1]));
     }
 
     private String work(String[] data) {
-        // TODO
-        return null;
+        return this.controller.work(data[0],Integer.parseInt(data[1]));
     }
 
     private String charge(String[] data) {
-        // TODO
-        return null;
+        return this.controller.charge(data[0],Integer.parseInt(data[1]));
     }
 
     private String sell(String[] data) {
-        // TODO
-        return null;
+        return this.controller.sell(data[0],data[1]);
     }
 
     private String history(String[] data) {
-        // TODO
-        return null;
+        return this.controller.history(data[0]);
     }
 }

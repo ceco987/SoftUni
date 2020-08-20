@@ -9,5 +9,5 @@ public interface Product {
 
     double getPrice();
 
-    double getOverallPerformance();
+    double getOverallPerformance() throws NoSuchFieldException;
 }

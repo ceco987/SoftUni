@@ -82,7 +82,8 @@ public abstract class BaseRobot implements Robot {
 
     @Override
     public String toString() {
-        return String.format(" %s - %s - Happiness: %d - Energy: %d%n", this.getClass().getSimpleName(),
+        return String.format(" %s - %s - Happiness: %d - Energy: %d%n",
+                this.getClass().getSimpleName(),
                 this.getName(),
                 this.getHappiness(),
                 this.getEnergy()
