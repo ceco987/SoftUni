@@ -7,26 +7,26 @@ public class Peripheral extends BaseProduct {
 
     @Override
     public int getId() {
-        return 0;
+        return super.getId();
     }
 
     @Override
     public String getManufacturer() {
-        return null;
+        return super.getManufacturer();
     }
 
     @Override
     public String getModel() {
-        return null;
+        return super.getModel();
     }
 
     @Override
     public double getPrice() {
-        return 0;
+        return super.getPrice();
     }
 
     @Override
-    public double getOverallPerformance() {
-        return 0;
+    public double getOverallPerformance() throws NoSuchFieldException {
+        return super.getOverallPerformance();
     }
 }

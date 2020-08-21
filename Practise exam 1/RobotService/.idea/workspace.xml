@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="32acfe3d-4c56-45b5-be19-00e7293ce091" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="C:\Temp\temp\plugins\maven\lib\maven3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1aanMrNwvbz3ms3UYVcUv0TWVTA" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="fileTemplates" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="robotService.Main" />
+      <module name="RobotService" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="robotService.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="32acfe3d-4c56-45b5-be19-00e7293ce091" name="Default Changelist" comment="" />
+      <created>1586982526645</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1586982526645</updated>
+      <workItem from="1586982532485" duration="544000" />
+      <workItem from="1586983129856" duration="37000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="459" y="122" width="1092" height="715" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1597932526930">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="459" y="122" width="1092" height="715" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1597932526930" />
+    <state x="1245" y="226" key="#com.intellij.ide.util.MemberChooser" timestamp="1597934630599">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1245" y="226" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1597934630599" />
+    <state width="914" height="281" key="GridCell.Tab.0.bottom" timestamp="1597935864840">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="914" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1597935864840" />
+    <state width="914" height="281" key="GridCell.Tab.0.center" timestamp="1597935864839">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="914" height="281" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1597935864839" />
+    <state width="914" height="281" key="GridCell.Tab.0.left" timestamp="1597935864839">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="914" height="281" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1597935864839" />
+    <state width="914" height="281" key="GridCell.Tab.0.right" timestamp="1597935864839">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="914" height="281" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1597935864839" />
+    <state x="1020" y="262" key="IDE.errors.dialog" timestamp="1597931952226">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1020" y="262" key="IDE.errors.dialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1597931952226" />
+    <state x="394" y="126" key="SettingsEditor" timestamp="1597932945611">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="394" y="126" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1597932945611" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1597933910268">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1597933910268" />
+  </component>
+</project>
