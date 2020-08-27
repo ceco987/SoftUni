@@ -27,7 +27,7 @@ public class CarRepository implements Repository<Car> {
 
     @Override
     public Collection<Car> getAll() {
-        return Collections.unmodifiableCollection(this.models);
+        return Collections.unmodifiableCollection(models);
     }
 
     @Override

@@ -26,7 +26,7 @@ public class DriverRepository implements Repository<Driver> {
 
     @Override
     public Collection<Driver> getAll() {
-        return Collections.unmodifiableCollection(this.models);
+        return Collections.unmodifiableCollection(models);
     }
 
     @Override
