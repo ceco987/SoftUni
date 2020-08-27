@@ -17,6 +17,31 @@ public abstract class BaseProduct implements Product {
         setOverallPerformance(overallPerformance);
     }
 
+    @Override
+    public int getId() {
+        return id;
+    }
+
+    @Override
+    public String getManufacturer() {
+        return manufacturer;
+    }
+
+    @Override
+    public String getModel() {
+        return model;
+    }
+
+    @Override
+    public double getPrice() {
+        return price;
+    }
+
+    @Override
+    public double getOverallPerformance() throws NoSuchFieldException {
+        return overallPerformance;
+    }
+
     public void setId(int id) {
         if (id <= 0) {
             throw new IllegalArgumentException(INVALID_PRODUCT_ID);
