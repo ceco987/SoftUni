@@ -1,6 +1,7 @@
 package easterRaces.core;
 
 import easterRaces.core.interfaces.Controller;
+import easterRaces.entities.cars.BaseCar;
 import easterRaces.entities.cars.Car;
 import easterRaces.entities.cars.MuscleCar;
 import easterRaces.entities.cars.SportsCar;
@@ -25,30 +26,30 @@ public class ControllerImpl implements Controller {
     private Repository<Race> raceRepository;
 
     public ControllerImpl(Repository<Driver> driverRepository, Repository<Car> carRepository, Repository<Race> raceRepository) {
-        this.driverRepository = new DriverRepository();
-        this.carRepository = new CarRepository();
-        this.raceRepository = new RaceRepository();
+        this.driverRepository = driverRepository;
+        this.carRepository = carRepository;
+        this.raceRepository = raceRepository;
     }
 
     @Override
     public String createDriver(String driver) {
         Driver result = new DriverImpl(driver);
-        if (driverRepository==null||!driverRepository.getAll().contains(result)) {
+        if (driverRepository.getByName(driver)==null) {
             driverRepository.add(result);
-            return String.format(DRIVER_CREATED,driver);
+            return String.format(DRIVER_CREATED, driver);
         }
         throw new IllegalArgumentException(String.format(DRIVER_EXISTS, driver));
     }
-
     @Override
     public String createCar(String type, String model, int horsePower) {
-        Car result = null;
+        BaseCar result;
         if (type.equals("Muscle")) {
             result = new MuscleCar(model, horsePower, 5000);
         } else if (type.equals("Sports")) {
             result = new SportsCar(model, horsePower, 3000);
         }
-        if (carRepository.getAll().contains(result)) {
+        else result = null;
+        if (carRepository.getByName(model)!=null&&result.getClass().getSimpleName().equals(type+"Car")) {
             throw new IllegalArgumentException(String.format(CAR_EXISTS, model));
         }
         carRepository.add(result);
@@ -61,7 +62,6 @@ public class ControllerImpl implements Controller {
         if (driverRepository.getByName(driverName) == null) {
             throw new IllegalArgumentException(String.format(DRIVER_NOT_FOUND, driverName));
         }
-
         if (carRepository.getByName(carModel) == null) {
             throw new IllegalArgumentException(String.format(CAR_NOT_FOUND, carModel));
         }
@@ -78,8 +78,7 @@ public class ControllerImpl implements Controller {
         if (driverRepository.getByName(driverName) == null) {
             throw new IllegalArgumentException(String.format(DRIVER_NOT_FOUND, driverName));
         }
-
-        Driver result = new DriverImpl(driverName);
+        Driver result = driverRepository.getByName(driverName);
         raceRepository.getByName(raceName).addDriver(result);
         return String.format(DRIVER_ADDED, driverName, raceName);
     }
@@ -89,34 +88,30 @@ public class ControllerImpl implements Controller {
         if (raceRepository.getByName(raceName) == null) {
             throw new IllegalArgumentException(String.format(RACE_NOT_FOUND, raceName));
         }
-        if (raceRepository.getAll().size() < 3) {
+        if (raceRepository.getByName(raceName).getDrivers().size() < 3) {
             throw new IllegalArgumentException(String.format(RACE_INVALID, raceName, 3));
         }
         Driver[] result;
+        int numOfLaps = raceRepository.getByName(raceName).getLaps();
         result = raceRepository.getByName(raceName).getDrivers().stream()
-                .sorted(Comparator.comparing(Driver::getNumberOfWins).reversed())
+                .sorted(Comparator.comparing(e->e.getCar().calculateRacePoints(numOfLaps)))
                 .limit(3)
                 .toArray(Driver[]::new);
+        raceRepository.remove(raceRepository.getByName(raceName));
         StringBuilder output = new StringBuilder();
-        for (Driver driver : result) {
-            output.append(String.format("Driver %s wins %s race.%n", driver.getName(), raceName));
-
-        }
+        output.append(String.format(DRIVER_FIRST_POSITION + "%n", result[2].getName(), raceName));
+        output.append(String.format(DRIVER_SECOND_POSITION + "%n", result[1].getName(), raceName));
+        output.append(String.format(DRIVER_THIRD_POSITION + "%n", result[0].getName(), raceName));
         return output.toString().trim();
     }
 
     @Override
     public String createRace(String name, int laps) {
-        if (!raceRepository.getAll().isEmpty()&&raceRepository.getByName(name).getName().equals(name)) {
+            if (raceRepository.getByName(name)!=null) {
             throw new IllegalArgumentException(String.format(RACE_EXISTS, name));
         }
         Race result = new RaceImpl(name, laps);
         raceRepository.add(result);
         return String.format(RACE_CREATED, name);
     }
-
-    public void End() {
-        System.exit(0);
-    }
-
 }

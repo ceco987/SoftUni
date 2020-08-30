@@ -1,26 +1,28 @@
 package easterRaces.repositories.interfaces;
 
 import easterRaces.entities.racers.Race;
+import easterRaces.entities.racers.RaceImpl;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 
 public class RaceRepository implements Repository<Race> {
-    private static Collection<Race> models;
+    private Collection<Race> models;
 
     public RaceRepository() {
-        models = new ArrayList<>();
+        this.models = new ArrayList<>();
     }
 
     @Override
-    public Race getByName(String name) {
-        for (Race race : models) {
+    public Race getByName(String name) throws NullPointerException {
+        Race ex = null;
+        for (Race race : this.models) {
             if (race.getName().equals(name)){
                 return race;
             }
         }
-        return null;
+        return ex;
     }
 
     @Override
@@ -30,11 +32,11 @@ public class RaceRepository implements Repository<Race> {
 
     @Override
     public void add(Race model) {
-        models.add(model);
+        this.models.add(model);
     }
 
     @Override
     public boolean remove(Race model) {
-        return models.remove(model);
+        return this.models.remove(model);
     }
 }

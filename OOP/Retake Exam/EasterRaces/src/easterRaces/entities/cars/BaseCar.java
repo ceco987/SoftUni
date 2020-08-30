@@ -10,7 +10,6 @@ public abstract class BaseCar implements Car{
 
     public BaseCar(String model, int horsePower, double cubicCentimeters) {
         setModel(model);
-        this.horsePower = horsePower;
         setCubicCentimeters(cubicCentimeters);
     }
 

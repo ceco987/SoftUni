@@ -13,7 +13,6 @@ public class RaceImpl implements Race {
     private String name;
     private int laps;
     private Collection<Driver> drivers;
-    private Repository<Race> repo = new RaceRepository();
 
     public RaceImpl(String name,int laps) {
         setName(name);
@@ -62,11 +61,11 @@ public class RaceImpl implements Race {
         else if (!driver.getCanParticipate()){
             throw new IllegalArgumentException(String.format(DRIVER_NOT_PARTICIPATE,driver.getName()));
         }
-        else if (drivers.contains(driver)){
+        else if (this.drivers.contains(driver)){
             throw new IllegalArgumentException(String.format(DRIVER_ALREADY_ADDED,driver.getName(),this.name));
         }
         else{
-            drivers.add(driver);
+            this.drivers.add(driver);
         }
     }
 }

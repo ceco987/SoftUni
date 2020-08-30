@@ -5,19 +5,17 @@ import easterRaces.entities.cars.Car;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
-import java.util.List;
-import java.util.stream.Collector;
 
 public class CarRepository implements Repository<Car> {
-    private static Collection<Car> models;
+    private Collection<Car> models;
 
     public CarRepository() {
-        models = new ArrayList<Car>();
+        this.models = new ArrayList<>();
     }
 
     @Override
     public Car getByName(String name) {
-        for (Car car : models) {
+        for (Car car : this.models) {
             if (car.getModel().equals(name)) {
                 return car;
             }
@@ -27,16 +25,16 @@ public class CarRepository implements Repository<Car> {
 
     @Override
     public Collection<Car> getAll() {
-        return Collections.unmodifiableCollection(models);
+        return Collections.unmodifiableCollection(this.models);
     }
 
     @Override
     public void add(Car model) {
-        models.add(model);
+        this.models.add(model);
     }
 
     @Override
     public boolean remove(Car model) {
-        return models.remove(model);
+        return this.models.remove(model);
     }
 }

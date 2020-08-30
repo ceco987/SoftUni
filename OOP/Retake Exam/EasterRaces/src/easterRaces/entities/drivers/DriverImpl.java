@@ -2,9 +2,6 @@ package easterRaces.entities.drivers;
 
 import easterRaces.entities.cars.Car;
 import easterRaces.repositories.interfaces.CarRepository;
-import easterRaces.repositories.interfaces.DriverRepository;
-
-import java.util.Collection;
 
 import static easterRaces.common.ExceptionMessages.CAR_INVALID;
 import static easterRaces.common.ExceptionMessages.INVALID_NAME;
@@ -16,16 +13,16 @@ public class DriverImpl implements Driver {
     private boolean canParticipate;
 
     public DriverImpl(String name) {
+        setName(name);
+    }
+
+    public void setName(String name){
         if (name.matches("\\s+")||name.length()<5){
             throw new IllegalArgumentException(String.format(INVALID_NAME,name,5));
         }
         else{
             this.name = name;
         }
-    }
-
-    public void setName(String name){
-        this.name=name;
     }
 
     @Override
@@ -51,7 +48,7 @@ public class DriverImpl implements Driver {
         else {
             this.car=car;
             this.canParticipate=true;
-            CarRepository repo = new CarRepository();
+            CarRepository repo = new CarRepository(); //TODO make sure this makes sense when running
             repo.add(car);
         }
     }
@@ -63,6 +60,6 @@ public class DriverImpl implements Driver {
 
     @Override
     public boolean getCanParticipate() {
-        return false;
+        return this.canParticipate;
     }
 }
