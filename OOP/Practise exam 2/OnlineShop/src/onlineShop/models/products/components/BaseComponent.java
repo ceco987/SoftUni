@@ -62,7 +62,7 @@ public abstract class BaseComponent extends BaseProduct implements Component {
     }
 
     @Override
-    public double getOverallPerformance() throws NoSuchFieldException{
+    public double getOverallPerformance(){
         return super.getOverallPerformance();
     }
 

@@ -1,12 +1,13 @@
 package onlineShop.models.products.computers;
 
 import onlineShop.models.products.BaseProduct;
+import onlineShop.models.products.Product;
 import onlineShop.models.products.components.Component;
 import onlineShop.models.products.peripherals.Peripheral;
 
 import java.util.ArrayList;
 import java.util.List;
-
+//TODO check wtf is happening here
 public abstract class BaseComputer extends BaseProduct implements Computer {
     private List<Component> components;
     private List<Peripheral> peripherals;
@@ -14,7 +15,7 @@ public abstract class BaseComputer extends BaseProduct implements Computer {
 
     public BaseComputer(int id, String manufacturer, String model, double price, double overallPerformance) {
         super(id, manufacturer, model, price, overallPerformance);
-        List<Component> components = new ArrayList<Component>();
+        List<Component> components = new ArrayList<>();
         List<Peripheral> peripherals = new ArrayList<>();
     }
 
@@ -49,10 +50,10 @@ public abstract class BaseComputer extends BaseProduct implements Computer {
     }
 
     @Override
-    public String toString() throws NoSuchFieldException{
+    public String toString() {
         StringBuilder output = new StringBuilder();
         this.components.forEach(e->output.append("  ").append(e).append(System.lineSeparator()));
-        double avgPerformance = this.peripherals.stream().mapToDouble(e->e.getOverallPerformance())
+        double avgPerformance = this.peripherals.stream().mapToDouble(Product::getOverallPerformance)
         .average().orElse(0.0);
         output.append(String.format(" Peripherals: (%d); Average Overall Performance (%.2f)%n",
                 this.peripherals.size(),avgPerformance));
@@ -70,6 +71,5 @@ public abstract class BaseComputer extends BaseProduct implements Computer {
                     .average().orElse(0.0);
         }
         return firstResult+firstResult;
-
     }
 }
