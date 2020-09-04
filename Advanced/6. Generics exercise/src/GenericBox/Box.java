@@ -9,10 +9,6 @@ public class Box <T>{
 
     @Override
     public String toString(){
-        StringBuilder output = new StringBuilder();
-        output.append(test.getClass().toString().replaceAll("class ",""))
-                .append(": ")
-                .append(this.test);
-        return output.toString();
+        return test.getClass().getName() + ": "+test.toString();
     }
 }
