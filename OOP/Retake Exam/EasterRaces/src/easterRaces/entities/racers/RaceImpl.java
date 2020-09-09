@@ -1,8 +1,6 @@
 package easterRaces.entities.racers;
 
 import easterRaces.entities.drivers.Driver;
-import easterRaces.repositories.interfaces.RaceRepository;
-import easterRaces.repositories.interfaces.Repository;
 
 import java.util.ArrayList;
 import java.util.Collection;

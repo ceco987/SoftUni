@@ -9,9 +9,6 @@ import easterRaces.entities.drivers.Driver;
 import easterRaces.entities.drivers.DriverImpl;
 import easterRaces.entities.racers.Race;
 import easterRaces.entities.racers.RaceImpl;
-import easterRaces.repositories.interfaces.CarRepository;
-import easterRaces.repositories.interfaces.DriverRepository;
-import easterRaces.repositories.interfaces.RaceRepository;
 import easterRaces.repositories.interfaces.Repository;
 
 import java.util.Comparator;
@@ -93,6 +90,14 @@ public class ControllerImpl implements Controller {
         }
         Driver[] result;
         int numOfLaps = raceRepository.getByName(raceName).getLaps();
+
+        //the method in the block should work as the other, however it's still not tested.
+        /*result = raceRepository.getByName(raceName).getDrivers().stream()
+                .sorted((f,s)-> (int) (s.getCar().calculateRacePoints(numOfLaps)-f.getCar().calculateRacePoints(numOfLaps)))
+                .limit(3)
+                .toArray(Driver[]::new);
+                */
+
         result = raceRepository.getByName(raceName).getDrivers().stream()
                 .sorted(Comparator.comparing(e->e.getCar().calculateRacePoints(numOfLaps)))
                 .limit(3)

@@ -13,8 +13,6 @@ import easterRaces.repositories.interfaces.DriverRepository;
 import easterRaces.repositories.interfaces.RaceRepository;
 import easterRaces.repositories.interfaces.Repository;
 
-import java.io.IOException;
-
 public class Main {
     public static void main(String[] args) {
         Repository<Car> motorcycleRepository = new CarRepository();
