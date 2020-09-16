@@ -1,0 +1,4 @@
+ALTER TABLE `users`
+	MODIFY `id` INT AUTO_INCREMENT UNIQUE,
+    DROP PRIMARY KEY,
+    ADD PRIMARY KEY (`id`,`username`);
