@@ -3,10 +3,10 @@ This repository is used to track my progress throughout the **SoftUni Java Devel
 
 ## My progress so far:
 - [x] [Programming Basics](Basic/)
-- [x] Java Fundamentals
-- [x] Java Advanced
-- [x] Java OOP
-- [ ] MySQL *(ongoing)*
+- [x] [Java Fundamentals](Fundamentals/)
+- [x] [Java Advanced](Advanced/)
+- [x] [Java OOP](OOP/)
+- [ ] [MySQL](MySQL/) *(ongoing)*
 - [ ] Spring Data
 - [ ] JS Advanced
 - [ ] JS Applications
