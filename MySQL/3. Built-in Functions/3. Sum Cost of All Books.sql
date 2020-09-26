@@ -1,0 +1,1 @@
+SELECT round(SUM(`cost`),2) AS `Total Cost` from `books`;
