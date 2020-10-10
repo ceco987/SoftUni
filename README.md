@@ -1,4 +1,6 @@
-# Softuni Java Development
+<img src="./assets/softuni logo no bg.png">
+<img src="./assets/softuni logo.png">
+
 This repository is used to track my progress throughout the **SoftUni Java Development** course
 
 ## My progress so far:
