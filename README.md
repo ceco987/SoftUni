@@ -1,4 +1,5 @@
 # Softuni Java Development
+
 This repository is used to track my progress throughout the **SoftUni Java Development** course
 
 ## My progress so far:
