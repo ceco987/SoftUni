@@ -1,5 +1,4 @@
-<!-- # Softuni Java Development -->
-<img src="./assets/softuni logo no bg.png" height="100px">
+# Softuni Java Development
 
 This repository is used to track my progress throughout the **SoftUni Java Development** course
 
