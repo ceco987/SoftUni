@@ -8,7 +8,7 @@ This repository is used to track my progress throughout the **SoftUni Java Devel
 - [x] [Java Advanced](Advanced/)
 - [x] [Java OOP](OOP/)
 - [x] [MySQL](MySQL/) 
-- [ ] [Spring Data]("Spring Data"/) *(ongoing)*
+- [ ] [Spring Data](Spring Data/) *(ongoing)*
 - [ ] JS Advanced
 - [ ] JS Applications
 - [ ] Java Web Basics
