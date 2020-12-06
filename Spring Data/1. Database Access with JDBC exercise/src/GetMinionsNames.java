@@ -1,3 +1,5 @@
+import setup.Setup;
+
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -10,8 +12,7 @@ public class GetMinionsNames {
         String statement = "SELECT m.name, m.age\n" +
                 "FROM minions as m\n" +
                 "join minions_villains mv on m.id = mv.minion_id\n" +
-                "join villains v on v.id = mv.villain_id\n" +
-                "where v.id = ?";
+                "where mv.villain_id = ?";
 
         PreparedStatement stmt = Setup.connection.prepareStatement(statement);
         System.out.print("Enter villain ID: ");

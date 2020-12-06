@@ -1,8 +1,10 @@
+import setup.Setup;
+
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class GetVillainsName {
+public class GetVillainsNames {
     public static void main(String[] args) throws SQLException {
         Setup.setConnection();
         String statement = "SELECT v.name, count(*) as count\n" +

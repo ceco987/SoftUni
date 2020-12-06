@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="73655908-e166-4fed-880e-6354a7f0b9ed" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/part2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/part2.java" afterDir="false" />
-    </list>
+    <list default="true" id="73655908-e166-4fed-880e-6354a7f0b9ed" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,7 +34,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="C:/Program Files/Java" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../1. Database Access with JDBC exercise" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -95,7 +92,7 @@
       <updated>1607264670868</updated>
       <workItem from="1607264671944" duration="1771000" />
       <workItem from="1607267627644" duration="3603000" />
-      <workItem from="1607276330063" duration="3307000" />
+      <workItem from="1607276330063" duration="3414000" />
     </task>
     <servers />
   </component>
