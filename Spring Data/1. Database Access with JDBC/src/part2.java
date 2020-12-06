@@ -1,6 +1,4 @@
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.Properties;
 import java.util.Scanner;
 
@@ -10,21 +8,37 @@ public class part2 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Properties props = new Properties();
-        String user;
-        String pass;
+        props.setProperty("user","root");
+        props.setProperty("password","domati");
 
-        try {
-            System.out.print("Enter username (leave blank for 'root'): ");
-            user = scanner.nextLine().trim();
-            user = user.equals("") ? "root" : user;
-            props.setProperty("user",user);
-            System.out.print("Enter password (leave blank for 'domati'): ");
-            pass = scanner.nextLine().trim();
-            pass = pass.equals("") ? "domati" : pass;
-            props.setProperty("password",pass);
-            Connection connection = DriverManager.getConnection(DB_URL,props);
+        try (Connection connection = DriverManager.getConnection(DB_URL,props);
+             PreparedStatement stmt = connection.prepareStatement(
+                     "SELECT u.first_name, u.last_name, count(ug.id) as count " +
+                             "FROM users as u join users_games ug on u.id = ug.user_id " +
+                             "WHERE u.user_name = ?"
+             );
+        ){
+            System.out.print("Please enter username: ");
+            String user = scanner.nextLine();
+            stmt.setString(1,user);
+            ResultSet rs = stmt.executeQuery();
+            while (rs.next()){
+                if (rs.getString("first_name")==null){
+                    System.out.print("No such user exists");
+                }
+                else {
+                    String quantifier = rs.getInt("count") == 1 ? "" : "s";
+                    System.out.printf("User: %s%n",user);
+                    System.out.printf("%s %s has played %d game%s",
+                            rs.getString("first_name"),
+                            rs.getString("last_name"),
+                            rs.getInt("count"),
+                            quantifier);
+                }
+            }
         } catch (SQLException throwables) {
-            System.err.println("Incorrect credentials!");
+            throwables.printStackTrace();
+            System.err.println("Something went wrong!");
         }
     }
 }
