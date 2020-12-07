@@ -7,9 +7,10 @@ import java.util.Scanner;
 import static setup.Setup.connection;
 import static setup.Setup.setConnection;
 
-public class IncreaseMinionsName {
+public class IncreaseMinionsAge {
     public static void main(String[] args) throws SQLException {
         Scanner scanner = new Scanner(System.in);
+        System.out.print("Please type minion IDs, separated by space: ");
         int[] input = Arrays.stream(scanner.nextLine().split("\\s+"))
                 .mapToInt(Integer::parseInt).toArray();
         setConnection();
