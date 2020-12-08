@@ -3,7 +3,7 @@
 This repository is used to track my progress throughout the **SoftUni Java Development** course
 
 ## My progress so far:
-- [x] [Programming Basics](Basic/)
+- [x] [~~Programming Basics~~](Basic/)
 - [x] [Java Fundamentals](Fundamentals/)
 - [x] [Java Advanced](Advanced/)
 - [x] [Java OOP](OOP/)
