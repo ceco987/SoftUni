@@ -10,10 +10,9 @@ public class IncreaseSalaries {
 
     public static void run(){
         entityManager.getTransaction().begin();
-        //todo: find out why this doesn't work... it works with IDs, but not with strings and only in the update statement.
         entityManager.createQuery("UPDATE Employee e " +
-                "SET e.salary = e.salary / 1.12 " +
-                "WHERE e.department.name in ('Engineering','Tool Design','Marketing','Information Services')")
+                "SET e.salary = e.salary * 1.12 " +
+                "WHERE e.department.id IN (1,2,4,11)")
                 .executeUpdate();
         entityManager.getTransaction().commit();
         entityManager.createQuery("SELECT e FROM Employee e " +
