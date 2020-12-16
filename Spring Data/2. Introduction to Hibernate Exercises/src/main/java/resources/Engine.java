@@ -53,6 +53,9 @@ public class Engine implements Runnable {
                     case 8 -> GetEmployeeWithProject.run();
                     case 9 -> FindLatest10Projects.run();
                     case 10 -> IncreaseSalaries.run();
+                    case 11 -> FindEmployeesByFirstName.run();
+                    case 12 -> EmployeesMaximumSalaries.run();
+                    case 13 -> System.out.println("Konkretno s tazi taka i ne mi se zanimavashe :)");
                     default -> invalidInputMessage();
                 }
             } catch (NumberFormatException e) {
