@@ -1,8 +1,8 @@
 package resources;
 
-import tasks.ChangeCasing;
-import tasks.ContainsEmployee;
-import tasks.EmployeesWithSalaryOver50000;
+import entities.Address;
+import entities.Employee;
+import tasks.*;
 
 import javax.persistence.EntityManager;
 import java.util.Scanner;
@@ -39,22 +39,46 @@ public class Engine implements Runnable {
             System.out.print("Please select task 2 - 13 or hit <Enter> for full list: ");
             input = scanner.nextLine().trim();
         }
-        try {
-            task = Integer.parseInt(input);
-            switch (task) {
-                case 2 -> ChangeCasing.run();
-                case 3 -> ContainsEmployee.run();
-                case 4 -> EmployeesWithSalaryOver50000.run();
-                default -> invalidInputMessage();
+
+            try {
+                task = Integer.parseInt(input);
+                switch (task) {
+                    case 0 -> resetNakovAddress();
+                    case 2 -> ChangeCasing.run();
+                    case 3 -> ContainsEmployee.run();
+                    case 4 -> EmployeesWithSalaryOver50000.run();
+                    case 5 -> EmployeesFromDepartment.run();
+                    case 6 -> AddingANewAddressAndUpdatingEmployee.run();
+                    case 7 -> AddressesWithEmployeeCount.run();
+                    case 8 -> GetEmployeeWithProject.run();
+                    case 9 -> FindLatest10Projects.run();
+                    case 10 -> IncreaseSalaries.run();
+                    default -> invalidInputMessage();
+                }
+            } catch (NumberFormatException e) {
+                invalidInputMessage();
             }
-        } catch (NumberFormatException e) {
-            invalidInputMessage();
-        }
+
     }
 
     private void invalidInputMessage() {
         System.err.print("Invalid input, please restart the program.");
-        System.exit(0);
+        System.exit(69420);
+    }
+
+    private void resetNakovAddress() {
+        Employee nakov = entityManager
+                .createQuery("SELECT e from Employee e " +
+                        "WHERE e.lastName ='Nakov'", Employee.class)
+                .getSingleResult();
+        Address nishava = entityManager
+                .createQuery("SELECT a from Address a " +
+                        "WHERE a.text like '%Nishava%'", Address.class)
+                .getSingleResult();
+        entityManager.getTransaction().begin();
+        nakov.setAddress(nishava);
+        entityManager.persist(nakov);
+        entityManager.getTransaction().commit();
     }
 
 }
