@@ -14,7 +14,7 @@ function solution(arr) {
 
     function checkWin(dashboard) {
         for (let i = 0; i < 3; i++) {
-            if (dashboard[i].every((el, i, arr) => el == arr[0] && el != false)) return true;
+            if (dashboard[i].every((el, i, arr) => el == arr[0] && el != false && el != undefined)) return true;
         }
 
         let primDiag = [];
@@ -35,7 +35,7 @@ function solution(arr) {
             let allDiags = [];
             allDiags.push(primDiag, secDiag, firstCol, secCol, thirdCol);
             for (let i = 0; i < allDiags.length; i++) {
-                if (allDiags[i].every((el, i, arr) => el == arr[0] && el != false)) {
+                if (allDiags[i].every((el, i, arr) => el == arr[0] && el != false && el != undefined)) {
                     return true;
                 }
             }
@@ -70,39 +70,39 @@ function solution(arr) {
 
 console.log(solution(
     ["0 1",
-    "0 0",
-    "0 2",
-    "2 0",
-    "1 0",
-    "1 1",
-    "1 2",
-    "2 2",
-    "2 1",
-    "0 0"]
+        "0 0",
+        "0 2",
+        "2 0",
+        "1 0",
+        "1 1",
+        "1 2",
+        "2 2",
+        "2 1",
+        "0 0"]
 ));
 console.log('-'.repeat(25));
 console.log(solution(
     ["0 0",
-    "0 0",
-    "1 1",
-    "0 1",
-    "1 2",
-    "0 2",
-    "2 2",
-    "1 2",
-    "2 2",
-    "2 1"]
+        "0 0",
+        "1 1",
+        "0 1",
+        "1 2",
+        "0 2",
+        "2 2",
+        "1 2",
+        "2 2",
+        "2 1"]
 ));
 console.log('-'.repeat(25));
 console.log(solution(
     ["0 1",
-    "0 0",
-    "0 2",
-    "2 0",
-    "1 0",
-    "1 2",
-    "1 1",
-    "2 1",
-    "2 2",
-    "0 0"]
+        "0 0",
+        "0 2",
+        "2 0",
+        "1 0",
+        "1 2",
+        "1 1",
+        "2 1",
+        "2 2",
+        "0 0"]
 ));
