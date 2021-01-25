@@ -1,32 +1,29 @@
-function solution(input) {
-    const result = [];
-    let firstIteration = false;
+function createSortedList(input){
+    let log = {};
 
-    input.forEach(e => {
-        let group = e.split(' | ');
-        let [town, product, price] = group;
-        price = Number(price);
-        if (result.length == 0) {
-            result.push({ [product] : {[town]: price } });
-            firstIteration = true;
-        } else firstIteration = false;
-        if (!firstIteration) {
-            result.forEach(obj => {
-                if (obj[product] != undefined) {
-                    [testTown] = Object.keys(obj[product]);
-                    if (testTown == town && obj[product[town]] < price) {
-                        obj[product[town]] = price;
-                    } else if (obj[product[town]] > price) {
-                        obj[product] = { town: price };
-                    }
-                } else result.push({ [product]: { [town]: price } });
-            })
+    while(input.length){
+        let group = input.shift();
+        let [town,product,price] = group.split(' | ');
+
+        if(!log[product]){                                      //correct
+            log[product] = {town,price:Number(price)};          //correct
+        } else if (log[product].town==town&&log[produt].price>price){
+            log[product] = {town,price:Number(price)};
+        } else{
+            if(log[product].price>Number(price)){
+                log[product] = {town,price:Number(price)};
+            }
         }
-    });
-    return result;
+    }
+
+    let result = [];
+    for(let product in log){
+        result.push(`${product} -> ${log[product].price} (${log[product].town})` )
+    }
+    return result.join('\n');
 }
 
-console.log(solution(
+console.log(createSortedList(
     ['Sample Town | Sample Product | 1000',
         'Sample Town | Orange | 2',
         'Sample Town | Peach | 1',
