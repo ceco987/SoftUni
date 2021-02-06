@@ -22,7 +22,7 @@ function solve() {
 
    function listTotal(ev){
       const list = Array.from(cart.keys()).join(', ');
-      const totalPrice = Array.from(cart.values()).reduce((acc,c)=>acc+Number(c),0);
+      const totalPrice = Array.from(cart.values()).reduce((acc,c)=>acc+c);
       textArea.textContent+=`You bought ${list} for ${totalPrice.toFixed(2)}.`
       initialCart.removeEventListener('click',onClick);
       initialCart.getElementsByClassName('checkout')[0].removeEventListener('click',listTotal)
