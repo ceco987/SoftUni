@@ -1,0 +1,15 @@
+{
+  "name": "unit_testing",
+  "version": "1.0.0",
+  "main": "1.SubSum.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "TSM",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "chai": "^4.3.0",
+    "mocha": "^8.3.0"
+  }
+}
