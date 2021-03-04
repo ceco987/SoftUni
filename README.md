@@ -10,7 +10,7 @@ This repository is used to track my progress throughout the **SoftUni Java Devel
 - [x] [MySQL](MySQL/) 
 - [x] [Spring Data](Spring%20Data/)
 - [x] [JS Advanced](JS%20Advanced/)
-- [ ] JS Applications *(UPCOMING)*
+- [ ] JS Applications *(ongoing)*
 - [ ] Java Web Basics
 - [ ] Spring MVC
 
