@@ -4,10 +4,9 @@ function loadCommits() {
     const url = `https://api.github.com/repos/${username.value}/${repo.value}/commits`;
     const ul = document.getElementById("commits");
 
-    //fix
     fetch(url)
         .then(response => {
-            try {
+            if (response.ok) {
                 const test = response.json();
                 test.then(data => {
                     ul.innerHTML = '';
@@ -17,8 +16,7 @@ function loadCommits() {
                         ul.appendChild(li);
                     })
                 })
-            }
-            catch (err) {
+            } else {
                 console.log(response)
                 ul.innerHTML = '';
                 const li = document.createElement('li');
@@ -26,7 +24,6 @@ function loadCommits() {
                 ul.appendChild(li);
             }
         })
-
 }
 
 document.querySelector("body").addEventListener('keyup', (ev) => {
