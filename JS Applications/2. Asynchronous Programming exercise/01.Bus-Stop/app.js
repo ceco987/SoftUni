@@ -9,12 +9,8 @@ async function getInfo() {
     
     const result = await fetch(url);
 
-    //replace if-else with try-catch
-    //consider removing redundant innerhtml for bus name
-    //clear input field at the last line of try
-    if (result.ok) {
+    try {
         const data = await result.json();
-        name.innerHTML = '';
         busses.innerHTML = '';
         name = data.name;
         busses = data.buses;
@@ -25,8 +21,9 @@ async function getInfo() {
             li.textContent = `Bus ${bus} arrives in ${time} minues`;
             busList.appendChild(li);
         }
+        id.value = '';
     }
-    else{
+    catch(err){
         stop.textContent = 'Error';
     }
 
