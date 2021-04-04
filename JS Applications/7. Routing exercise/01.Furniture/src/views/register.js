@@ -1,7 +1,7 @@
 import { html } from "../../node_modules/lit-html/lit-html.js"
 import { register } from "../api/data.js"
 
-const registerTemplate = (onSubmit,invalidEmail,invalidPass,invalidRe) => html`
+const registerTemplate = (onSubmit) => html`
 <div class="row space-top">
     <div class="col-md-12">
         <h1>Register New User</h1>
