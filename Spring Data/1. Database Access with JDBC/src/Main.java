@@ -9,19 +9,20 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         //Properties and connection
         Properties props = new Properties();
-        props.setProperty("user","root");
-        props.setProperty("password","domati");
-        Connection connection = DriverManager.getConnection(DB_URL,props);
-        //Properties and connection
+        props.setProperty("user", "root");
+        props.setProperty("password", "domati");
+        Connection connection = DriverManager.getConnection(DB_URL, props);
 
         String statement = "SELECT first_name, last_name FROM employees WHERE salary > ?";
-        PreparedStatement stmt =
-                connection.prepareStatement(statement);
+        PreparedStatement stmt = connection.prepareStatement(statement);
+
+        System.out.print("Enter desired salary: ");
         String salary = scanner.nextLine();
-        stmt.setDouble(1,Double.parseDouble(salary));
+        stmt.setDouble(1, Double.parseDouble(salary));
         ResultSet rs = stmt.executeQuery();
-        while (rs.next()){
-            System.out.println(rs.getString("first_name")+" "+rs.getString("last_name"));
+
+        while (rs.next()) {
+            System.out.println(rs.getString("first_name") + " " + rs.getString("last_name"));
         }
 
     }
