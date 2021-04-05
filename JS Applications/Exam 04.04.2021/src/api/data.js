@@ -32,5 +32,6 @@ export async function deleteArticle(id){
 }
 
 export async function search(query){
-    return await api.get(host+`/data/wiki?where=title%20LIKE%20%22${query}%22`)
+    const encoded = encodeURIComponent(query);
+    return await api.get(host+`/data/wiki?where=title%20LIKE%20%22${encoded}%22`)
 }
