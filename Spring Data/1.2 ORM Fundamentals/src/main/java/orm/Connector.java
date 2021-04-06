@@ -6,17 +6,15 @@ import java.sql.SQLException;
 import java.util.Properties;
 
 public class Connector {
+    public static final String DB_URL = "jdbc:mysql://localhost:3306/";
     private static Connection connection;
-    private static final String DB_URL = "jdbc:mysql://localhost:3306/";
-
-    private static void createConnection (String username, String password, String dbName) throws SQLException {
+    public static void createConnection(String database, String user, String password) throws SQLException {
         Properties props = new Properties();
-        props.setProperty("user","root");
-        props.setProperty("password","domati");
-        connection = DriverManager.getConnection(DB_URL);
+        props.setProperty("user", user);
+        props.setProperty("password", password);
+        Connection connection = DriverManager.getConnection(DB_URL + database, props);
     }
-
-    public static Connection getConnection() {
+    private Connection getConnection() {
         return connection;
     }
 }

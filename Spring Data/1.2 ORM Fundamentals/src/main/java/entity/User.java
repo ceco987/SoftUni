@@ -1,22 +1,23 @@
 package entity;
 
-import orm.annotation.Column;
-import orm.annotation.Entity;
-import orm.annotation.Id;
+import orm.annotations.Column;
+import orm.annotations.Entity;
+import orm.annotations.Id;
 
 import java.time.LocalDate;
+import java.util.Objects;
 
-@Entity(name="USERS")
+@Entity(name = "USERS")
 public class User {
     @Id
     private int id;
-    @Column(name = "username")
+    @Column(name="username")
     private String username;
-    @Column(name = "password")
+    @Column(name="password")
     private String password;
-    @Column (name = "age")
+    @Column(name="age")
     private int age;
-    @Column(name = "registration_date")
+    @Column(name="registration_date")
     private LocalDate registrationDate;
 
     public User() {
@@ -70,13 +71,27 @@ public class User {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof User)) return false;
+        User user = (User) o;
+        return id == user.id;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
+    }
+
+    @Override
     public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", username='" + username + '\'' +
-                ", password='" + password + '\'' +
-                ", age=" + age +
-                ", registrationDate=" + registrationDate +
-                '}';
+        final StringBuilder sb = new StringBuilder("User{");
+        sb.append("id=").append(id);
+        sb.append(", username='").append(username).append('\'');
+        sb.append(", password='").append(password).append('\'');
+        sb.append(", age=").append(age);
+        sb.append(", registrationDate=").append(registrationDate);
+        sb.append('}');
+        return sb.toString();
     }
 }
