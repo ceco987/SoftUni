@@ -10,13 +10,12 @@ public class EmployeesWithSalaryOver50000 {
 
     public static void run() {
         entityManager = Engine.entityManager;
-        StringBuilder output = new StringBuilder();
+
         entityManager
                 .createQuery("SELECT e from Employee e " +
                         "WHERE e.salary > 50000", Employee.class)
                 .getResultStream()
                 .map(Employee::getFirstName)
-                .forEach(e -> output.append(e).append(System.lineSeparator()));
-        System.out.print(output.toString().trim());
+                .forEach(System.out::println);
     }
 }

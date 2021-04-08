@@ -11,6 +11,5 @@ public class Main {
         EntityManager entityManager = emf.createEntityManager();
         Engine engine = new Engine(entityManager);
         engine.run();
-        System.out.println("neshto");
     }
 }
