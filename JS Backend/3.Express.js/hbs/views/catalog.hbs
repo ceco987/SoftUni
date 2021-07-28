@@ -1,0 +1,11 @@
+<h1>Book catalog</h1>
+<a href="/catalog/create">Create Book</a>
+{{#if books}}
+<ul>
+    {{#each books}}
+    {{> book}}
+    {{/each}}
+</ul>
+{{else}}
+<span class="info">No books in database</span>
+{{/if}}

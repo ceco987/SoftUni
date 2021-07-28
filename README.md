@@ -11,7 +11,7 @@ This repository is used to track my progress throughout the **SoftUni Java Devel
 - [x] [Spring Data](Spring%20Data/)
 - [x] [JS Advanced](JS%20Advanced/)
 - [x] [JS Applications](JS%20Applications/)
-- [ ] JS Backend *(upcoming)*
+- [ ] [JS Backend](JS%20Backend/)
 - [ ] Frontend Framework (TBA)
 - [ ] Java Web Basics
 - [ ] Spring MVC
