@@ -1,15 +1,17 @@
 const router = require('express').Router();
 
-router.get('/',(req,res)=>{
-    res.redirect('/products');
-})
+const asyncWrapper = require('../util/asyncWrapper');
 
-router.get('/about',(req,res)=>{
-    res.render('about',{title: 'About Page'});
+
+router.get('/', (req, res) => res.redirect('/products'));
+
+router.get('/about', asyncWrapper(async (req, res) => {
+    throw new Error('Simulated error');
+    res.render('about', { title: 'About Page' });
+}));
+
+router.all('*', (req, res) => {
+    res.render('404', { title: 'Page Not Found' });
 });
-
-router.all('*',(req,res)=>{
-    res.render('404',{title:'Page Not Found'});
-})
 
 module.exports = router;

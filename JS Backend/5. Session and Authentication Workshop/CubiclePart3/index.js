@@ -1,10 +1,10 @@
 const express = require('express');
 const expressConfig = require('./config/express');
-const routesConfig = require('./config/routes');
 const databaseConfig = require('./config/database');
+const routesConfig = require('./config/routes');
 
-const storage = require('./middlewares/storage');
 const logger = require('./middlewares/logger');
+const storage = require('./middlewares/storage');
 
 start();
 
@@ -12,14 +12,13 @@ async function start() {
     const port = 3000;
     const app = express();
 
-    // app.use(logger);
+    // app.use(logger());
 
-    expressConfig(app);
     await databaseConfig(app);
-
+    expressConfig(app);
+    
     app.use(await storage());
-    routesConfig(app); 
+    routesConfig(app);
 
-
-    app.listen(port, console.log(`Listening on port ${port}! Now its up to you...`));
+    app.listen(port, () => console.log(`Server listening on port ${port}`));
 }

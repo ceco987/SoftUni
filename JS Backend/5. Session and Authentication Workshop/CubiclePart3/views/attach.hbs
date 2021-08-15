@@ -3,11 +3,11 @@
     <h2>{{cube.name}}</h2>
     <img class="cube" src="{{cube.imageUrl}}">
     {{#if accessories}}
-    <form action="/details/{{cube.id}}/attach" method="POST">
+    <form action="/details/{{cube._id}}/attach" method="POST">
         <label for="accessory">Accessories</label>
         <select id="accessory" name="accessory">
             {{#each accessories}}
-            <option value="{{id}}">{{name}}</option>
+            <option value="{{_id}}">{{name}}</option>
             {{/each}}
         </select>
         <input type="submit" value="Attach">
